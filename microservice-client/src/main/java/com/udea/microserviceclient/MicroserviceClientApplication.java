@@ -44,39 +44,4 @@ public class MicroserviceClientApplication {
     public ClientController clientController() {
         return new ClientController();
     }
-
-    @Bean
-    public CommandLineRunner demo(ClientRepository repository) {
-        return (String[] args) -> {
-            // save a couple of customers
-            repository.save(new Client(1017238295, "Juan Camilo", "camov1209@gmail.com", "3154415064"));
-            repository.save(new Client(1017266454, " Luisa Fernanda", "luisa0129@gmail.com", "3102791015"));
-            repository.save(new Client(5887184, "Pedro", "pedro1024@gmail.com", "3112270256"));
-            repository.save(new Client(1014897213, "Maria Fernanda", "mafe@gmail.com", "3142510768"));
-
-            // fetch all customers
-//            log.info("Customers found with findAll():");
-//            log.info("-------------------------------");
-//            for (Customer customer : repository.findAll()) {
-//                log.info(customer.toString());
-//            }
-//            log.info("");
-
-            // fetch an individual customer by ID
-//            Customer customer = repository.findOne(1L);
-//            log.info("Customer found with findOne(1L):");
-//            log.info("--------------------------------");
-//            log.info(customer.toString());
-//            log.info("");
-
-            // fetch customers by last name
-//            log.info("Customer found with findByLastName('Bauer'):");
-//            log.info("--------------------------------------------");
-//            for (Customer bauer : repository.findByLastName("Bauer")) {
-//                log.info(bauer.toString());
-//            }
-//            log.info("");
-        };
-    }
-
 }

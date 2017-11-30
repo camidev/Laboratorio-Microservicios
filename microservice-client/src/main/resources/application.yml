@@ -19,4 +19,4 @@ eureka:
             defaultZone: http://localhost:1111/eureka/
             
 server: 
-    port: 3333
+    port: 6666
